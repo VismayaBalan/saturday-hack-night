@@ -2,12 +2,14 @@
 
 
 # Project Name
-Long Description about project. This project do that. This project is awesome...
+ PlanMyTrip
+ Our project is a webapp which helps users to plan their trips according to their budjets.The user can enter their desired destination and a feasible budjet.As a result user gets a complete travel plan which includes all the top places to visit and food suggestions if any according to their budget plan.Here we use OpenAi's Davinci text model for generating results.
+
 ## Team members
-1. Name [Embed personal github URL]
-2. Name [Embed perosnal github URL]
+1. Rishikesh k v     https://github.com/rishi9808
+2. Vismaya B         https://github.com/VismayaBalan
 ## Team Id
-Team id here(You can find it in email)
+MMLsZpqYUl3kAyN1oF1R
 ## Link to product walkthrough
 [link to video]
 ## How it Works ?
