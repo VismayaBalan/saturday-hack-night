@@ -28,6 +28,8 @@ express - ^4.18.2 <br />
 openai - "^3.1.0 
 
 ## How to configure
-Instructions for setting up project
+`npm install`
 ## How to Run
-Instructions for running
+`npm run dev` <br />
+or <br />
+`npm run start`
