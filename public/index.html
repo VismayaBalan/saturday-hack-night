@@ -4,56 +4,539 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanMyTrip</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
 
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- js -->
     <script src="js/main.js" defer></script>
-    <title>Plan My Trip</title>
   </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <div class="logo">
-          <h2>PlanMyTrip.com</h2>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li>
-              <a href="https://beta.openai.com/docs" target="_blank"
-                >OpenAI API Docs</a
-              >
-            </li>
-          </ul>
-        </div>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#">
+          <h1 class="logo">PlanMyTrip.com</h1>
+        </a>
+
+        <nav class="navbar"></nav>
       </div>
     </header>
 
     <main>
-      <section class="showcase">
-        <form id="text-form">
-          <h1>Destination</h1>
-          <div class="form-control">
-            <input type="text" id="location" placeholder="Enter location" />
-          </div>
-          <!-- size -->
-          <div class="form-control">
-            <h1>Budget</h1>
-          <div class="form-control">
-            <input type="text" id="budget" placeholder="Enter budget" />
-          </div>
-          </div>
-          <button type="submit" class="btn">Generate</button>
-        </form>
-      </section>
+      <article>
+        <!-- 
+        - #HERO
+      -->
 
-      <section class="text">
-        
-          <h2 class="msg"></h2>
-          <h2 id="output" class="output-msg"></h2>
-        
-      </section>
+        <section
+          class="section hero"
+          style="
+            background-image: url('images/hero-bg-bottom.png')
+              url('images/hero-bg-top.png');
+          "
+        >
+          <div class="container">
+            <img
+              src="images/shape-1.png"
+              width="61"
+              height="61"
+              alt="Vector Shape"
+              class="shape shape-1"
+            />
+
+            <img
+              src="images/shape-2.png"
+              width="56"
+              height="74"
+              alt="Vector Shape"
+              class="shape shape-2"
+            />
+
+            <img
+              src="images/shape-3.png"
+              width="57"
+              height="72"
+              alt="Vector Shape"
+              class="shape shape-3"
+            />
+
+            <div class="hero-content">
+              <p class="section-subtitle">Explore Your Travel</p>
+
+              <h2 class="hero-title">Planning For a trip?</h2>
+              <h3 class="hero-title">We got you covered</h3>
+
+              <p class="hero-text">
+                I travel not to go anywhere, but to go. I travel for travel's
+                sake the great affair is to move.
+              </p>
+
+              <div class="btn-group">
+                <a href="#" class="btn btn-outline">Learn More</a>
+              </div>
+            </div>
+
+            <figure class="hero-banner">
+              <img
+                src="images/hero-banner.png"
+                width="686"
+                height="812"
+                loading="lazy"
+                alt="hero banner"
+                class="w-100"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- 
+        - #DESTINATION
+      -->
+
+        <section class="section destination">
+          <div class="container">
+            <form id="text-form">
+              <p class="section-subtitle">Destinations</p>
+
+              <h2 class="h2 section-title">Choose Your Place</h2>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  required
+                  placeholder="Choose your Destination."
+                />
+              </div>
+
+              <p class="section-subtitle">Budget</p>
+
+              <h2 class="h2 section-title">Choose Your budget</h2>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="budget"
+                  name="budget"
+                  required
+                  placeholder="Choose your Budget."
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="margin-left: 42%; margin-top: 5%"
+              >
+                Generate
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- 
+        - #POPULAR
+      -->
+
+        <section class="section popular">
+          <div class="container">
+            <p class="section-subtitle">Your Personalised PLan</p>
+
+            <!-- <h2 class="h2 section-title">A 3 day trip to</h2> -->
+            <h2 class="msg"></h2>
+            <p id="output" class="hero-text"></p>
+
+            <div class="spinner"></div>
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <section class="section about">
+          <div class="container">
+            <div class="about-content">
+              <p class="section-subtitle">About Us</p>
+
+              <h2 class="h2 section-title">
+                Explore all tour of the world with us.
+              </h2>
+
+              <p class="about-text">
+                Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or randomised words which
+                don't look even slightly believable.
+              </p>
+
+              <ul class="about-list">
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="compass"></ion-icon>
+                  </div>
+
+                  <div class="about-item-content">
+                    <h3 class="h3 about-item-title">Tour guide</h3>
+
+                    <p class="about-item-text">
+                      Lorem Ipsum available, but the majority have suffered
+                      alteration in some.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="briefcase"></ion-icon>
+                  </div>
+
+                  <div class="about-item-content">
+                    <h3 class="h3 about-item-title">Friendly price</h3>
+
+                    <p class="about-item-text">
+                      Lorem Ipsum available, but the majority have suffered
+                      alteration in some.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="umbrella"></ion-icon>
+                  </div>
+
+                  <div class="about-item-content">
+                    <h3 class="h3 about-item-title">Reliable tour</h3>
+
+                    <p class="about-item-text">
+                      Lorem Ipsum available, but the majority have suffered
+                      alteration in some.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <figure class="about-banner">
+              <img
+                src="images/about-banner.png"
+                width="756"
+                height="842"
+                loading="lazy"
+                alt=""
+                class="w-100"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- 
+        - #BLOG
+      -->
+
+        <section class="section blog">
+          <div class="container">
+            <p class="section-subtitle">From The Blog Post</p>
+
+            <h2 class="h2 section-title">Latest News & Articles</h2>
+
+            <ul class="blog-list">
+              <li>
+                <div class="blog-card">
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img
+                        src="images/popular-1.jpg"
+                        width="740"
+                        height="518"
+                        loading="lazy"
+                        alt="A good traveler has no fixed plans and is not intent on arriving."
+                        class="img-cover"
+                      />
+                    </a>
+
+                    <span class="card-badge">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="12-04">04 Dec</time>
+                    </span>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="author-wrapper">
+                        <figure class="author-avatar">
+                          <img
+                            src="images/author-avatar.png"
+                            width="30"
+                            height="30"
+                            alt="Jony bristow"
+                          />
+                        </figure>
+
+                        <div>
+                          <a href="#" class="author-name">Jony bristow</a>
+
+                          <p class="author-title">Admin</p>
+                        </div>
+                      </div>
+
+                      <time class="publish-time" datetime="10:30"
+                        >10:30 AM</time
+                      >
+                    </div>
+
+                    <h3 class="card-title">
+                      <a href="#">
+                        A good traveler has no fixed plans and is not intent on
+                        arriving.
+                      </a>
+                    </h3>
+
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+
+                      <ion-icon
+                        name="arrow-forward-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img
+                        src="images/blog-2.jpg"
+                        width="740"
+                        height="518"
+                        loading="lazy"
+                        alt="A good traveler has no fixed plans and is not intent on arriving."
+                        class="img-cover"
+                      />
+                    </a>
+
+                    <span class="card-badge">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="12-04">04 Dec</time>
+                    </span>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="author-wrapper">
+                        <figure class="author-avatar">
+                          <img
+                            src="images/author-avatar.png"
+                            width="30"
+                            height="30"
+                            alt="Jony bristow"
+                          />
+                        </figure>
+
+                        <div>
+                          <a href="#" class="author-name">Jony bristow</a>
+
+                          <p class="author-title">Admin</p>
+                        </div>
+                      </div>
+
+                      <time class="publish-time" datetime="10:30"
+                        >10:30 AM</time
+                      >
+                    </div>
+
+                    <h3 class="card-title">
+                      <a href="#">
+                        A good traveler has no fixed plans and is not intent on
+                        arriving.
+                      </a>
+                    </h3>
+
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+
+                      <ion-icon
+                        name="arrow-forward-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img
+                        src="images/blog-3.jpg"
+                        width="740"
+                        height="518"
+                        loading="lazy"
+                        alt="A good traveler has no fixed plans and is not intent on arriving."
+                        class="img-cover"
+                      />
+                    </a>
+
+                    <span class="card-badge">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="12-04">04 Dec</time>
+                    </span>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="author-wrapper">
+                        <figure class="author-avatar">
+                          <img
+                            src="images/author-avatar.png"
+                            width="30"
+                            height="30"
+                            alt="Jony bristow"
+                          />
+                        </figure>
+
+                        <div>
+                          <a href="#" class="author-name">Jony bristow</a>
+
+                          <p class="author-title">Admin</p>
+                        </div>
+                      </div>
+
+                      <time class="publish-time" datetime="10:30"
+                        >10:30 AM</time
+                      >
+                    </div>
+
+                    <h3 class="card-title">
+                      <a href="#">
+                        A good traveler has no fixed plans and is not intent on
+                        arriving.
+                      </a>
+                    </h3>
+
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+
+                      <ion-icon
+                        name="arrow-forward-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
     </main>
 
-    <div class="spinner"></div>
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer
+      class="footer"
+      style="background-image: url('./assets/images/footer-bg.png')"
+    >
+      <div class="container">
+        <div class="footer-top"></div>
+
+        <div class="footer-bottom">
+          <a href="#" class="logo">PlanMyTrip</a>
+
+          <p class="copyright">
+            &copy; 2023
+            <a href="#" class="copyright-link">Internet Explorers</a>. All
+            Rights Reserved
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+      <ion-icon name="chevron-up-outline"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
