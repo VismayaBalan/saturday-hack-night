@@ -12,7 +12,7 @@ const generateText = async (req,res) => {
 
     const { location , budget} = req.body;
 
-    const promptText = `I need a complete travel plan with places to visit and food to try in for 3 Days in ${location} in  a budget of Rs${budget}.show the output day by day and leave 10 line space between each day`
+    const promptText = `I need a complete travel plan with places to visit and food to try in for 3 Days in ${location} in  a budget of Rs${budget}.show the output day by day and add a dotted line after each day`
     console.log(req.body);
     try {
         const response = await openai.createCompletion({
