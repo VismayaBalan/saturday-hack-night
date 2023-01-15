@@ -28,8 +28,11 @@ express - ^4.18.2 <br />
 openai - "^3.1.0 
 
 ## How to configure
+1. Clone this repo <br /> 
+2. Open terminal on the repo folder and install the dependencies  <br /> 
 `npm install`
 ## How to Run
-`npm run dev` <br />
+1. Open terminal on the repo folder and type
+`npm run start` <br />
 or <br />
-`npm run start`
+`npm run dev`
