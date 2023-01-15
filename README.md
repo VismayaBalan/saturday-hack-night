@@ -35,4 +35,7 @@ openai - "^3.1.0
 1. Open terminal on the repo folder and type
 `npm run start` <br />
 or <br />
-`npm run dev`
+`npm run dev` <br />
+2. open a browser and go to http://localhost:5000
+<br />
+
