@@ -2,8 +2,8 @@
 
 
 # Project Name
- PlanMyTrip
- Our project is a webapp which helps users to plan their trips according to their budjets.The user can enter their desired destination and a feasible budjet.As a result user gets a complete travel plan which includes all the top places to visit and food suggestions if any according to their budget plan.Here we use OpenAi's Davinci text model for generating results.
+ PlanMyTrip <br />
+ Our project is a webapp which helps users to plan their trips according to their budget.The user can enter their desired destination and a feasible budget.As a result user gets a complete travel plan which includes all the top places to visit and food suggestions if any according to their budget plan.Here we use OpenAi's Davinci text model for generating results.
 
 ## Team members
 1. Rishikesh k v     https://github.com/rishi9808
